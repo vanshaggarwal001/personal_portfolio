@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Page Not Found | Vansh Aggarwal</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .not-found{
+      min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 24px;
+    }
+    .not-found h1{
+      font-family: var(--font-display); font-size: clamp(5rem, 18vw, 9rem); font-weight: 800;
+      background: var(--gradient-primary); -webkit-background-clip: text; background-clip: text; color: transparent;
+      line-height: 1;
+    }
+    .not-found p{ color: var(--text-muted); margin: 16px 0 30px; max-width: 420px; }
+  </style>
+</head>
+<body>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="not-found">
+    <h1>404</h1>
+    <p>This page wandered off the map. Let's get you back to somewhere useful.</p>
+    <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-house"></i> Back to Home</a>
+  </div>
+  <script src="assets/js/particles.js"></script>
+</body>
+</html>

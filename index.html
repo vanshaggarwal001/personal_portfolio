@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vansh Aggarwal — Software Engineer & Full Stack Developer</title>
+  <meta name="description" content="Vansh Aggarwal — Computer Science student, Full Stack Developer and UI Designer. Explore projects, skills, certificates and experience." />
+  <meta name="keywords" content="Vansh Aggarwal, Software Engineer, Full Stack Developer, Web Developer, Portfolio, Java Programmer, UI Designer" />
+  <meta name="author" content="Vansh Aggarwal" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vansh Aggarwal — Software Engineer & Full Stack Developer" />
+  <meta property="og:description" content="Computer Science student specializing in DSA, Java and Full Stack Web Development." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/og-cover.jpg" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== LOADING SCREEN ===================== -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-logo">VA<span class="dot">.</span></span>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Cursor glow + trail (decorative, disabled on touch) -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- Particle background canvas -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-inner">
+      <a href="#home" class="brand">Vansh<span>.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-link>Home</a></li>
+        <li><a href="#about" class="nav-link" data-link>About</a></li>
+        <li><a href="#education" class="nav-link" data-link>Education</a></li>
+        <li><a href="#skills" class="nav-link" data-link>Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-link>Projects</a></li>
+        <li><a href="#experience" class="nav-link" data-link>Experience</a></li>
+        <li><a href="#github" class="nav-link" data-link>GitHub</a></li>
+        <li><a href="#contact" class="nav-link" data-link>Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="assets/resume/Vansh_Aggarwal_Resume.pdf" class="btn btn-sm btn-primary" download>Resume</a>
+        <button id="navToggle" class="icon-btn nav-burger" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section id="home" class="hero">
+      <div class="hero-shapes" aria-hidden="true">
+        <span class="shape shape-1"></span>
+        <span class="shape shape-2"></span>
+        <span class="shape shape-3"></span>
+      </div>
+
+      <div class="container hero-grid">
+        <div class="hero-text" data-aos="fade-up">
+          <p class="eyebrow">Hello, I'm</p>
+          <h1 class="hero-name">Vansh Aggarwal</h1>
+          <h2 class="hero-type">
+            <span id="typed"></span><span class="cursor-blink">|</span>
+          </h2>
+          <p class="hero-desc">
+            Computer Science student crafting efficient solutions and intuitive,
+            user-centric interfaces — one line of code at a time.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="assets/resume/Vansh_Aggarwal_Resume.pdf" class="btn btn-primary" download>
+              <i class="fa-solid fa-download"></i> Download Resume
+            </a>
+            <a href="#projects" class="btn btn-outline">View Projects</a>
+            <a href="#contact" class="btn btn-ghost">Hire Me</a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/vanshaggarwal001" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/vansh-aggarwal-58a2aa324" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://youtube.com/@tech_vanshaggarwal" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="mailto:va262687@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-image" data-aos="fade-left" data-aos-delay="150">
+          <div class="hero-image-glow"></div>
+          <div class="hero-image-frame">
+            <img src="assets/images/profile-placeholder.svg" alt="Vansh Aggarwal" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll down">
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="section">
+      <div class="container">
+        <p class="section-eyebrow" data-aos="fade-up">Get to know me</p>
+        <h2 class="section-title" data-aos="fade-up">About Me</h2>
+
+        <div class="about-grid">
+          <div class="about-text" data-aos="fade-right">
+            <p>
+              Hi, I'm <strong>Vansh Aggarwal</strong>, a Computer Science Engineering student
+              with a strong analytical mindset and a passion for solving complex problems.
+            </p>
+            <p>
+              I specialize in Data Structures &amp; Algorithms, Java programming, and Full Stack
+              Web Development, with a focus on building efficient solutions and intuitive,
+              user-centric interfaces.
+            </p>
+            <p>
+              I approach challenges the way a chess player approaches the board — thinking
+              strategically, planning ahead, and making calculated decisions. This mindset helps
+              me break down problems logically, stay patient under pressure, and deliver
+              thoughtful, optimized outcomes.
+            </p>
+            <p>
+              Driven by curiosity and continuous learning, I actively explore new technologies to
+              stay aligned with the ever-evolving tech landscape. I enjoy turning ideas into
+              impactful digital experiences and am always looking for opportunities to grow,
+              collaborate, and create meaningful solutions.
+            </p>
+
+            <div class="about-meta">
+              <div><i class="fa-solid fa-location-dot"></i> Dehradun, Uttarakhand, India</div>
+              <div><i class="fa-solid fa-language"></i> English, Hindi</div>
+            </div>
+          </div>
+
+          <div class="about-card glass" data-aos="fade-left">
+            <h3>Quick Facts</h3>
+            <ul class="quick-facts">
+              <li><span>Role</span><strong>Software Engineer / Web Developer</strong></li>
+              <li><span>Education</span><strong>B.Tech, Computer Science</strong></li>
+              <li><span>Year</span><strong>3rd Year — 5th Semester</strong></li>
+              <li><span>CGPA</span><strong>8.0</strong></li>
+              <li><span>Based in</span><strong>Dehradun, India</strong></li>
+              <li><span>Email</span><strong>va262687@gmail.com</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section id="education" class="section alt">
+      <div class="container">
+        <p class="section-eyebrow" data-aos="fade-up">Academic Journey</p>
+        <h2 class="section-title" data-aos="fade-up">Education</h2>
+
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass">
+              <span class="timeline-year">2024 — 2028</span>
+              <h3>Bachelor of Technology, Computer Science</h3>
+              <p class="timeline-org">Dev Bhoomi Uttarakhand University</p>
+              <p>Currently in 3rd Year, 5th Semester · CGPA: <strong>8.0</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <p class="section-eyebrow" data-aos="fade-up">What I work with</p>
+        <h2 class="section-title" data-aos="fade-up">Skills</h2>
+
+        <div class="skills-grid">
+          <div class="skill-group glass" data-aos="fade-up">
+            <h3><i class="fa-solid fa-display"></i> Frontend</h3>
+            <div class="bar-skill" data-level="90"><span>HTML</span><div class="bar"><div class="fill"></div></div></div>
+            <div class="bar-skill" data-level="85"><span>CSS</span><div class="bar"><div class="fill"></div></div></div>
+            <div class="bar-skill" data-level="80"><span>JavaScript</span><div class="bar"><div class="fill"></div></div></div>
+            <div class="bar-skill" data-level="70"><span>React</span><div class="bar"><div class="fill"></div></div></div>
+            <div class="bar-skill" data-level="85"><span>Bootstrap</span><div class="bar"><div class="fill"></div></div></div>
+            <div class="bar-skill" data-level="80"><span>Tailwind CSS</span><div class="bar"><div class="fill"></div></div></div>
+          </div>
+
+          <div class="skill-group glass" data-aos="fade-up" data-aos-delay="100">
+            <h3><i class="fa-solid fa-server"></i> Backend &amp; Database</h3>
+            <div class="bar-skill" data-level="70"><span>Node.js</span><div class="bar"><div class="fill"></div></div></div>
+            <div class="bar-skill" data-level="65"><span>Express.js</span><div class="bar"><div class="fill"></div></div></div>
+            <div class="bar-skill" data-level="65"><span>MongoDB</span><div class="bar"><div class="fill"></div></div></div>
+            <h3 class="mt"><i class="fa-solid fa-code"></i> Programming</h3>
+            <div class="bar-skill" data-level="88"><span>Java</span><div class="bar"><div class="fill"></div></div></div>
+            <div class="bar-skill" data-level="75"><span>Python</span><div class="bar"><div class="fill"></div></div></div>
+            <div class="bar-skill" data-level="70"><span>C++</span><div class="bar"><div class="fill"></div></div></div>
+          </div>
+
+          <div class="skill-group glass" data-aos="fade-up" data-aos-delay="200">
+            <h3><i class="fa-solid fa-wrench"></i> Tools</h3>
+            <div class="circle-row">
+              <div class="circle-skill" data-level="85"><svg viewBox="0 0 80 80"><circle class="track" cx="40" cy="40" r="34"></circle><circle class="prog" cx="40" cy="40" r="34"></circle></svg><span>Git</span></div>
+              <div class="circle-skill" data-level="85"><svg viewBox="0 0 80 80"><circle class="track" cx="40" cy="40" r="34"></circle><circle class="prog" cx="40" cy="40" r="34"></circle></svg><span>GitHub</span></div>
+              <div class="circle-skill" data-level="90"><svg viewBox="0 0 80 80"><circle class="track" cx="40" cy="40" r="34"></circle><circle class="prog" cx="40" cy="40" r="34"></circle></svg><span>VS Code</span></div>
+            </div>
+
+            <h3 class="mt"><i class="fa-solid fa-people-group"></i> Soft Skills</h3>
+            <div class="chip-row">
+              <span class="chip">Communication</span>
+              <span class="chip">Leadership</span>
+              <span class="chip">Problem Solving</span>
+              <span class="chip">Teamwork</span>
+              <span class="chip">Time Management</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="projects" class="section alt">
+      <div class="container">
+        <p class="section-eyebrow" data-aos="fade-up">Selected Work</p>
+        <h2 class="section-title" data-aos="fade-up">Projects</h2>
+
+        <div class="projects-toolbar" data-aos="fade-up">
+          <div class="filter-group" id="filterGroup">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web Apps</button>
+            <button class="filter-btn" data-filter="ui">UI / Design</button>
+          </div>
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="projectSearch" placeholder="Search projects..." />
+          </div>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <article class="project-card glass" data-category="web" data-aos="fade-up">
+            <div class="project-thumb">
+              <img src="assets/images/project-restaurant.svg" alt="Olive & Ember restaurant website screenshot" loading="lazy" />
+              <div class="project-thumb-actions">
+                <a href="https://github.com/vanshaggarwal001/restaurant_website" target="_blank" rel="noopener" aria-label="View source on GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://vanshaggarwal001.github.io/restaurant_website/" target="_blank" rel="noopener" aria-label="View live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Restaurant Website</h3>
+              <p>A modern, responsive restaurant website featuring a menu showcase, reservation system, and customer reviews with an attractive, mobile-friendly UI.</p>
+              <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+              <div class="project-footer">
+                <span class="duration"><i class="fa-regular fa-clock"></i> 1 Month</span>
+                <div class="project-links">
+                  <a href="https://github.com/vanshaggarwal001/restaurant_website" target="_blank" rel="noopener">Code</a>
+                  <a href="https://vanshaggarwal001.github.io/restaurant_website/" target="_blank" rel="noopener">Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass" data-category="web" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-thumb">
+              <img src="assets/images/project-weather.svg" alt="Weather Dashboard screenshot" loading="lazy" />
+              <div class="project-thumb-actions">
+                <a href="https://github.com/vanshaggarwal001/Weather_Dashboard" target="_blank" rel="noopener" aria-label="View source on GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://vanshaggarwal001.github.io/Weather_Dashboard/" target="_blank" rel="noopener" aria-label="View live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Weather Dashboard</h3>
+              <p>A responsive weather dashboard powered by a live Weather API, displaying real-time conditions, humidity, wind speed, temperature and forecast.</p>
+              <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>API</span></div>
+              <div class="project-footer">
+                <span class="duration"><i class="fa-regular fa-clock"></i> 1 Month</span>
+                <div class="project-links">
+                  <a href="https://github.com/vanshaggarwal001/Weather_Dashboard" target="_blank" rel="noopener">Code</a>
+                  <a href="https://vanshaggarwal001.github.io/Weather_Dashboard/" target="_blank" rel="noopener">Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="empty-state" id="projectsEmpty" hidden>No projects match your search.</p>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section id="experience" class="section">
+      <div class="container">
+        <p class="section-eyebrow" data-aos="fade-up">Where I've worked</p>
+        <h2 class="section-title" data-aos="fade-up">Internship Experience</h2>
+
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass">
+              <span class="timeline-year">1 Month</span>
+              <h3>Frontend Web Developer</h3>
+              <p class="timeline-org">CodeAlpha</p>
+              <p>Worked on building responsive, production-quality frontend interfaces and features as part of a remote internship program.</p>
+              <a href="https://www.linkedin.com/posts/vansh-aggarwal-58a2aa324_internship-frontenddevelopment-codealpha-activity-7379737930308923392-57RN" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                <i class="fa-solid fa-certificate"></i> View Certificate
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================== CERTIFICATES ===================== -->
+        <div class="certificates-block">
+          <h3 class="sub-heading" data-aos="fade-up">Certificates</h3>
+          <div class="certs-grid">
+            <div class="cert-card glass" data-aos="fade-up">
+              <i class="fa-solid fa-award cert-icon"></i>
+              <h4>Frontend Developer</h4>
+              <p>CodeAlpha</p>
+              <a href="https://www.linkedin.com/posts/vansh-aggarwal-58a2aa324_internship-frontenddevelopment-codealpha-activity-7379737930308923392-57RN" target="_blank" rel="noopener" class="btn btn-sm btn-outline">View Certificate</a>
+            </div>
+            <div class="cert-card glass" data-aos="fade-up" data-aos-delay="100">
+              <i class="fa-solid fa-award cert-icon"></i>
+              <h4>Introduction to AI</h4>
+              <p>Google</p>
+              <a href="#" class="btn btn-sm btn-outline" aria-disabled="true">View Certificate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GITHUB ===================== -->
+    <section id="github" class="section alt">
+      <div class="container">
+        <p class="section-eyebrow" data-aos="fade-up">Open Source</p>
+        <h2 class="section-title" data-aos="fade-up">GitHub Activity</h2>
+
+        <div class="github-profile glass" data-aos="fade-up">
+          <img id="ghAvatar" src="assets/images/profile-placeholder.svg" alt="GitHub avatar" />
+          <div>
+            <h3 id="ghName">vanshaggarwal001</h3>
+            <p id="ghBio">Loading GitHub profile…</p>
+            <a href="https://github.com/vanshaggarwal001" target="_blank" rel="noopener" class="btn btn-sm btn-primary">View Profile</a>
+          </div>
+        </div>
+
+        <div class="github-stats">
+          <div class="gh-stat glass" data-aos="zoom-in"><i class="fa-solid fa-code-branch"></i><span id="ghRepos">—</span><label>Repositories</label></div>
+          <div class="gh-stat glass" data-aos="zoom-in" data-aos-delay="80"><i class="fa-solid fa-user-group"></i><span id="ghFollowers">—</span><label>Followers</label></div>
+          <div class="gh-stat glass" data-aos="zoom-in" data-aos-delay="160"><i class="fa-solid fa-user-plus"></i><span id="ghFollowing">—</span><label>Following</label></div>
+        </div>
+
+        <h3 class="sub-heading" data-aos="fade-up">Contribution Calendar</h3>
+        <div class="contrib-calendar glass" data-aos="fade-up">
+          <img src="https://ghchart.rshah.org/2563EB/vanshaggarwal001" alt="GitHub contribution calendar for vanshaggarwal001" loading="lazy" class="contrib-img" />
+        </div>
+
+        <h3 class="sub-heading" data-aos="fade-up">Latest Repositories</h3>
+        <div class="repo-grid" id="repoGrid">
+          <p class="muted">Loading repositories…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STATISTICS ===================== -->
+    <section id="stats" class="section">
+      <div class="container">
+        <p class="section-eyebrow" data-aos="fade-up">By the Numbers</p>
+        <h2 class="section-title" data-aos="fade-up">Portfolio Statistics</h2>
+
+        <div class="stats-grid">
+          <div class="stat-card glass" data-aos="fade-up"><span class="counter" data-target="2">0</span><label>Projects Completed</label></div>
+          <div class="stat-card glass" data-aos="fade-up" data-aos-delay="60"><span class="counter" data-target="2">0</span><label>Certificates Earned</label></div>
+          <div class="stat-card glass" data-aos="fade-up" data-aos-delay="120"><span class="counter" data-target="1">0</span><label>Internships</label></div>
+          <div class="stat-card glass" data-aos="fade-up" data-aos-delay="180"><span class="counter" data-target="2" id="statRepos">0</span><label>GitHub Repositories</label></div>
+          <div class="stat-card glass" data-aos="fade-up" data-aos-delay="240"><span class="counter" data-target="12">0</span><label>Technologies Learned</label></div>
+          <div class="stat-card glass" data-aos="fade-up" data-aos-delay="300"><span class="counter" data-target="300">0</span><label>Coding Hours</label></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== INTERESTS ===================== -->
+    <section id="interests" class="section alt">
+      <div class="container">
+        <p class="section-eyebrow" data-aos="fade-up">Beyond the Code</p>
+        <h2 class="section-title" data-aos="fade-up">Interests</h2>
+
+        <div class="interests-grid">
+          <div class="interest-card glass" data-aos="fade-up"><i class="fa-solid fa-laptop-code"></i><span>Coding</span></div>
+          <div class="interest-card glass" data-aos="fade-up" data-aos-delay="60"><i class="fa-solid fa-globe"></i><span>Web Development</span></div>
+          <div class="interest-card glass" data-aos="fade-up" data-aos-delay="120"><i class="fa-brands fa-osi"></i><span>Open Source</span></div>
+          <div class="interest-card glass" data-aos="fade-up" data-aos-delay="180"><i class="fa-brands fa-youtube"></i><span>YouTube</span></div>
+          <div class="interest-card glass" data-aos="fade-up" data-aos-delay="240"><i class="fa-solid fa-camera"></i><span>Photography</span></div>
+          <div class="interest-card glass" data-aos="fade-up" data-aos-delay="300"><i class="fa-solid fa-book"></i><span>Reading</span></div>
+          <div class="interest-card glass" data-aos="fade-up" data-aos-delay="360"><i class="fa-solid fa-plane"></i><span>Traveling</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section id="testimonials" class="section">
+      <div class="container">
+        <p class="section-eyebrow" data-aos="fade-up">What people say</p>
+        <h2 class="section-title" data-aos="fade-up">Testimonials</h2>
+
+        <div class="testimonial-slider glass" data-aos="fade-up">
+          <button class="t-arrow t-prev" aria-label="Previous testimonial"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="t-track" id="testimonialTrack">
+            <div class="t-slide active">
+              <p>"Vansh has a sharp eye for UI detail and ships clean, well-structured frontend code faster than expected."</p>
+              <strong>— Mentor, CodeAlpha Internship</strong>
+            </div>
+            <div class="t-slide">
+              <p>"Consistently curious and methodical — approaches every bug like a puzzle worth solving properly."</p>
+              <strong>— Project Collaborator</strong>
+            </div>
+            <div class="t-slide">
+              <p>"Great communicator and reliable teammate who takes ownership of features end-to-end."</p>
+              <strong>— Course Instructor</strong>
+            </div>
+          </div>
+          <button class="t-arrow t-next" aria-label="Next testimonial"><i class="fa-solid fa-chevron-right"></i></button>
+          <div class="t-dots" id="testimonialDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BLOG PREVIEW ===================== -->
+    <section id="blog" class="section alt">
+      <div class="container">
+        <p class="section-eyebrow" data-aos="fade-up">Coming Soon</p>
+        <h2 class="section-title" data-aos="fade-up">From the Blog</h2>
+
+        <div class="blog-grid">
+          <article class="blog-card glass" data-aos="fade-up">
+            <span class="blog-tag">DSA</span>
+            <h3>Cracking Dynamic Programming, One Pattern at a Time</h3>
+            <p>Notes on bitmask DP, tree partitioning, and the mental models that make DP click.</p>
+            <span class="blog-soon">Coming soon</span>
+          </article>
+          <article class="blog-card glass" data-aos="fade-up" data-aos-delay="100">
+            <span class="blog-tag">Computer Vision</span>
+            <h3>Building Gesture-Controlled Interfaces with MediaPipe</h3>
+            <p>Lessons from building real-time hand-tracking tools and HUD-style interactions.</p>
+            <span class="blog-soon">Coming soon</span>
+          </article>
+          <article class="blog-card glass" data-aos="fade-up" data-aos-delay="200">
+            <span class="blog-tag">Web Dev</span>
+            <h3>Designing Glassmorphism UIs That Don't Feel Generic</h3>
+            <p>A practical look at depth, blur and contrast for premium-feeling interfaces.</p>
+            <span class="blog-soon">Coming soon</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <p class="section-eyebrow" data-aos="fade-up">Let's connect</p>
+        <h2 class="section-title" data-aos="fade-up">Contact Me</h2>
+
+        <div class="contact-grid">
+          <div class="contact-info" data-aos="fade-right">
+            <div class="contact-row"><i class="fa-solid fa-envelope"></i><a href="mailto:va262687@gmail.com">va262687@gmail.com</a></div>
+            <div class="contact-row"><i class="fa-solid fa-phone"></i><a href="tel:+918630351552">+91 86303 51552</a></div>
+            <div class="contact-row"><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/918630351552" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+            <div class="contact-row"><i class="fa-solid fa-location-dot"></i><span>Dehradun, Uttarakhand, India</span></div>
+
+            <div class="contact-socials">
+              <a href="https://github.com/vanshaggarwal001" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/vansh-aggarwal-58a2aa324" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://youtube.com/@tech_vanshaggarwal" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+            <div class="map-embed glass">
+              <iframe
+                title="Map of Dehradun, Uttarakhand"
+                src="https://www.google.com/maps?q=Dehradun,Uttarakhand,India&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+          <form class="contact-form glass" id="contactForm" data-aos="fade-left">
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="user_name" required placeholder="Your full name" />
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="user_email" required placeholder="you@example.com" />
+            </div>
+            <div class="form-row">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="user_phone" placeholder="+91 00000 00000" />
+            </div>
+            <div class="form-row">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required placeholder="What's this about?" />
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or opportunity..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              <span class="btn-text">Send Message</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <p class="form-status" id="formStatus" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#home" class="brand">Vansh<span>.</span></a>
+      <p>&copy; <span id="year"></span> Vansh Aggarwal. Built with HTML, CSS &amp; JavaScript.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/vanshaggarwal001" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/vansh-aggarwal-58a2aa324" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://youtube.com/@tech_vanshaggarwal" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Visitor counter (placeholder, local) -->
+  <div class="visitor-badge" id="visitorBadge" title="Visits this browser">
+    <i class="fa-solid fa-eye"></i> <span id="visitorCount">0</span>
+  </div>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="assets/js/particles.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

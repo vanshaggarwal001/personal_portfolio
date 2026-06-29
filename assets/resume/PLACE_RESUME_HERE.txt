@@ -1,0 +1,6 @@
+Place your resume PDF here and name it exactly:
+
+Vansh_Aggarwal_Resume.pdf
+
+The "Download Resume" buttons on the site already link to this filename, so once you
+add the real file here, the buttons will work immediately — no code changes needed.
